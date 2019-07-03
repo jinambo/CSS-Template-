@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap');
+
+// basic styles
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  padding: 30px;
+  box-sizing: border-box;
+  color: #fff;
+  background: #f1f2f6;
+  font-family: 'Montserrat', sans-serif;
+  @media (max-width: 600px) {
+      padding: 5px;
+  }
+}
+
+input, button {
+    border: none;
+    outline: none;
+}
+//end of basic styles
+
+// example class is used for different pages than index
+.example {
+    -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0) !important;
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0) !important; 
+    height: auto !important;  
+    .text-box {
+        position: relative !important;
+        transform: none !important;
+        left: 0 !important;
+        top: 0 !important;
+        margin: 0 auto;
+        padding: 125px 0;
+        p {
+            padding-top: 25px;
+        }
+    }
+}
+
+// header
+.header {
+  position: relative;
+  width: 100%;
+  height: 95vh;  
+  background-image: linear-gradient(to right, rgba(15, 32, 39,.75), rgba(32, 58, 67, .75), rgba(44, 83, 100, .95)), url(https://www.goodfreephotos.com/albums/other-landscapes/tree-and-starlight-landscape-night.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: top;
+  -webkit-clip-path: polygon(100% 0, 100% 80%, 0 100%, 0 0);
+  clip-path: polygon(100% 0, 100% 80%, 0 100%, 0 0);
+  
+  .logo-box {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 999;
+       a {
+        text-decoration: none;
+        color: #fff;
+       }
+       b {
+        color: #ffff00;
+        text-decoration: overline;
+      }
+      @media (max-width: 768px) {
+          font-size: .7em;
+      }
+  }
+  
+  .menu-box {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    z-index: 999;
+    .dropdowned-box {
+        opacity: 0;
+        padding: 12px;
+        color: #2b2b2b;
+        background: #f1f2f6;
+        display: block;
+        position: absolute;
+        right: 0;
+        margin-top: 25px;
+        margin-right: 5px;
+        border-radius: 5px;
+        transition: .25s all ease-in-out;
+        .arrow {
+            z-index: -2;
+            width: 40px;
+            height: 40px;
+            background: #f1f2f6;
+            transform: rotate(45deg);
+            position: absolute;
+            top: -5%;
+            right: 8%;
+        } 
+        @media (max-width: 768px) {
+            width: 90%;
+            .arrow {
+                width: 25px;
+                height: 25px;
+                top: 0;
+                left: 50%;
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+      margin: 10px;
+      font-size: 1.25em;
+      transition: .25s all ease-in-out;
+      &:hover {
+          color: #ffff00;
+      }
+    }
+    @media (max-width: 768px) {
+        transition: .33s all ease-in-out;
+        //display: none;
+        z-index: 99;
+        top: -200%;
+        right: 0;
+        background: #2b2b2b;
+        width: 100%;
+        text-align: center;
+        padding-bottom: 15px;
+        padding-top: 110px;
+        border-bottom: 1px solid #ffff00;
+        a {
+            display: block;
+            padding: 5px 0;
+        }
+    }
+  }
+  
+  .mobile-btn {
+      z-index: 999;
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    .line {
+        display: block;
+        width: 45px;
+        height: 2px;
+        background: #fff;
+        margin-top: 5px;
+    }
+    @media (max-width: 768px) {
+        display: block;
+    }
+  }
+
+  .text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 70%;
+    @media (max-width: 768px) {
+        width: 80%;
+    }
+    h1 {
+      font-size: 3em;
+      font-weight: 700;
+      letter-spacing: 8px;
+      -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      b {
+        color: #ffff00;
+        text-decoration: overline;
+      }
+    }
+    p {
+      font-size: 1.15em;
+      margin-top: 10px;
+      -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    button {
+      padding: 14px 28px;
+      margin: 0 10px;
+      margin-top: 50px;
+      border-radius: 25px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      font-size: 1.075em;
+      cursor: pointer;
+      background: #ffff00; 
+      transition: all .33s ease-in-out;
+      border: 3px solid #ffff00;
+      font-weight: 500;
+      color: #2d2d2d;
+      &:hover {
+       background: transparent;
+       color: #ffff00;
+      }
+    }
+    @media (max-width: 768px) {
+        h1 {
+            font-size: 1.55em;
+            letter-spacing: 1.5px;
+        }
+    }
+  }
+}
+// end of header
+
+// about page section
+.information {
+  position: relative;
+  width: 97%;
+  height: auto;
+  color: #2b2b2b;
+  margin: 0 auto;
+  padding: 30px 0;
+  p {
+      margin-top: 10px;
+  }
+  .boxes {
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    .box {
+      padding: 16px;
+      width: 25%;
+      height: auto;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+      border-radius: 7px;
+      margin-left: 8px;
+      margin-right: 8px;
+      transition: .33s all ease-in-out;
+      background: #fff;
+      text-align: center;
+      h1 {
+        font-size: 1.25em;
+      }
+      h3 {
+          font-size: .9em;
+          color: #2b2b2b;
+          font-weight: 500;
+      }
+      p {
+          color: #2b2b2b;
+          font-weight: 300;
+          margin-top: 15px;
+      }
+      img {
+          width: 100%;
+          border-radius: 3.5px;
+      }
+      .box-btn {
+        margin-top: 15px;
+        padding: 12px 0;
+        width: 100%;
+        background: #ffe900; 
+        box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
+        border-radius: 3.5px;
+        border: none;
+        cursor: pointer;
+        transition: all .33s ease-in-out;
+        text-transform: uppercase;
+        &:hover {
+            background: #ffff00;
+        }
+      }
+      &:hover {
+        box-shadow: 0 4px 8px rgba(0,0,0,0.20), 0 4px 8px rgba(0,0,0,0.29);       
+      }
+      &:nth-child(1) {
+        margin-left: 0; 
+      }
+      &:nth-last-child(1) {
+        margin-right: 0;
+      }
+    }
+    @media (max-width: 768px) {
+      display: block;
+      .box {
+        width: auto;
+        margin: 5px !important;
+      }
+    }
+  }
+}
+// end of about page section
+
+// news letter section
+.news {
+  position: relative;
+  width: 100%;
+  height: 95vh;
+  background-image: linear-gradient(to right, rgba(15, 32, 39,.75), rgba(32, 58, 67, .75), rgba(44, 83, 100, .95)), url(https://www.goodfreephotos.com/albums/other-landscapes/tree-and-starlight-landscape-night.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: bottom;
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 20%);
+  clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 20%);
+
+  .news-content {
+      padding: 180px 40px;
+    .news-title {
+        color: #fff;
+        h1 {
+
+        }
+        h3 {
+            font-weight: 500;
+        }
+        p {
+            margin-top: 25px;
+            color: #eee;
+        }
+    }
+    .news-input {
+        position: relative;
+        margin-top: 10%;
+        width: 97%;
+        height: 50px;
+        background: #fff;
+        overflow: hidden;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.23);
+        border-radius: 3.5px;
+        input {
+            width: 63.5%;
+            height: 100%;
+            font-size: 1.2em;
+            padding: 0 7.5px;
+        }
+        button {
+            box-shadow: 0 1px 3px rgba(0,0,0,0.33);
+            width: 33.5%;
+            float: right;
+            cursor: pointer;
+            height: 100%;
+            background: #ffe900; 
+            font-size: 1.5em;
+            font-weight: 500;
+            color: #2b2b2b;
+            transition: .25s all ease-in-out;
+            &:hover {
+                background: #ffff00;
+            }
+        }
+        @media (max-width: 768px) {
+            input {
+                width: 60%;
+            }
+        }
+    }  
+  } 
+}
+// news letter section
+
+// footer
+.footer {
+    color: #2b2b2b;
+    text-align: center;
+    margin-top: 25px;
+    a {
+        text-decoration: none;
+        color: #2d2d2d;
+    }
+}
+// end of footer
+
+//-------------------------------------------------------------
+
+// animations
+ @-webkit-keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-left {
+    0% {
+      -webkit-transform: translateX(-1000px);
+              transform: translateX(-1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+
+ @-webkit-keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-right {
+    0% {
+      -webkit-transform: translateX(1000px);
+              transform: translateX(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+// end of animations
